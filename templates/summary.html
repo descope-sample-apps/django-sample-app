@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="title">Text Summarizer</h1>
+    <div class="flex-row">
+        <a class="sum-btn" href={% url 'index' %}>🏠 &nbsp; Home</a>
+        <a class="sum-btn logout" href="{% url 'logout' %}">🔴 &nbsp; Logout</a>
+    </div>
+    <input class="submit-btn" form="sum_form" type="submit" value="Summarize">
+    <div class="flex-row">
+        <form id="sum_form" class="flex-col sum" method="POST" action="{% url 'summary' %}">
+            <p class="sum-label">Text</p>
+            {% csrf_token %}
+            {{ summary_form }}
+        </form>
+        <div class="flex-col sum" id="sum-text">
+            <p class="sum-label">Summarized Text</p>
+            <p class="sum-text">
+                {{ summary }}
+            </p>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,24 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Inter:wght@400;500&display=swap');
 
 
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Golos Text', sans-serif;
+    color: rgb(22, 22, 22);
+}
+body {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgb(236, 236, 236) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(236, 236, 236) 1px, transparent 1px);
 }
 h1, p {
     font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    background-color: rgb(24, 24, 24);
-    padding: 3vh 4vh;
-    color: rgb(0, 255, 204);
+.title {
+    width: 90%;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 3.8em;
+    color: rgb(6, 177, 146);
     margin-top: 3vh;
+    margin-bottom: 6vh;
 }
-.debug-btn {
-    margin-top: 3vh;
-    font-family: 'Press Start 2P', cursive;
-    color: black;
+.page {
+    margin-bottom: 6vh;
 }
 .flex-col {
     display: flex;
@@ -29,20 +38,100 @@ h1 {
     height: 100%;
     width: 100%;
 }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    width: 95%;
+}
 .logo {
-    width: 8vw;
+    width: 4vw;
     height: auto;
 }
 .logo-container {
-    margin-top: 5vh;
-    padding: 3vh;
-    border-radius: 50%;
-    background-color: rgb(24, 24, 24);
+    border-bottom-right-radius: 30px;
+    padding: 2vh;
+    background-color: rgb(21, 21, 21);
     width: fit-content;
 }
-.logout {
-    color: rgb(241, 72, 29);
+.home-btn {
+    padding: 3vh;
+    padding-left: 5vh;
+    margin-top: 3vh;
+    text-align: left;
+    width: 50%;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(203, 203, 203);
+    border: 1px solid rgb(216, 216, 216);
+    background-color: rgb(240, 240, 240);
+    color: rgb(0, 168, 137);
+    font-size: 1.4em;
 }
-.logo-container, h1 {
-    box-shadow: 0px 0px 5px rgb(125, 125, 125), 0px 0px 10px rgb(31, 31, 31);
+.sum-btn {
+    color:rgb(21, 21, 21);
+    text-decoration: none;
+    padding: 1.5vh 4vh;
+    margin: 1vh;
+    background-color: rgb(183, 255, 220);
+    border-radius: 10px;
+}
+.arrow {
+    color: rgb(24, 24, 24);
+    float: right;
+}
+.logout {
+    background-color: rgb(255, 219, 219);
+    color: rgb(255, 51, 0);
+}
+.sum {
+    flex: 1;
+    width: 100%;
+}
+.sum-form, .sum-text {
+  background-color: rgb(245, 245, 245);
+  resize: none;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 25px;
+  outline: none;
+  min-height: 40vw;
+  padding: 2vh;
+  width: 90%;
+}
+.sum-form {
+    font-size: 1.1em;
+    font-family: 'Golos Text', sans-serif;
+}
+.sum-text {
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: normal;
+    background-color: rgb(255, 255, 255);
+}
+.sum-label {
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.submit-btn {
+    margin-top: 3vh;
+    border: none;
+    padding: 2vh 4vh;
+    background-color: rgb(6, 177, 146);
+    color: rgb(236, 255, 251);
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+@media only screen and (max-width: 768px) {
+    .sum {
+        flex: none;
+        width: 100vh;
+    }
 }

@@ -1,0 +1,28 @@
+{% load static %}
+{% load descope %} 
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8" />
+
+        <title>Descope Django</title>
+        <meta name="description" content="Descope Example" />
+        <meta name="author" content="Descope" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/style.css' %}"
+        />
+        <link rel="icon" type="image/x-icon" href="{% static '/images/descope.jpeg' %}">
+    </head>
+    <body>
+        <div>
+            <div class="logo-container flex-col">
+                <a href="https://www.descope.com/" target="_blank"><img src="{% static '/images/logo.png' %}" alt="logo" class="logo" /></a>
+            </div>
+        <div>
+        <div class="flex-col page">
+            {% block content %}{% endblock content %}
+        </div>
+    </body>
+</html>
