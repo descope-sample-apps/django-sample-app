@@ -1,9 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>descope/renovate-config"],
-  "rangeStrategy": "widen",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  }
-}
