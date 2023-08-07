@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "django-sample-app"
+version = "0.1.0"
+description = "Learn how to integrate Descope authentication in Django by building a Quillbot clone. "
+authors = ["Descope <info@descope.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.4"
+python-dotenv = "^1.0.0"
+django-descope = "^1.2.0"
+summa = "^1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

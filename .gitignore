@@ -23,6 +23,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+/poetry.lock
 
 # Unit test / coverage reports
 htmlcov/
