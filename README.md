@@ -9,9 +9,7 @@ Learn how to integrate Descope authentication in Django by building a Quillbot c
 Run the following commands:
 
 ```
-pip3 install -r requirements.txt
-python3 manage.py makemigrations
-python3 manage.py migrate
+make setup
 ```
 
 ### Descope
@@ -29,7 +27,7 @@ Run the following command:
 python3 manage.py runserver
 ```
 
-## Roles ⚙️
+## Roles 🥷
 
 Sign up for Descope and set admin roles.
 
