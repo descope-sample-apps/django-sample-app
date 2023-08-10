@@ -36,7 +36,3 @@ Create two roles in Descope, that will be mapped to Django permissions.
 - is_superuser
 
 Map these roles to any user you would like to make a staff or superuser in your Django app.
-
-<br />
-
-Happy Coding ☕
