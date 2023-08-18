@@ -13,7 +13,7 @@ make setup
 
 2. Environment variables
    
-Create a .env file in the root project directory
+Create a ```.env``` file in the root project directory: 
 ```
 DESCOPE_PROJECT_ID=YOUR_DESCOPE_PROJECT_ID
 ```
