@@ -4,25 +4,20 @@ Learn how to integrate Descope authentication in Django by building a Quillbot c
 
 ## Setup ⚙️
 
-### Dependencies 
-
-Run the following commands:
-
+1. Dependencies 
+Run the following command to install dependencies:
 ```
 make setup
 ```
 
-### Descope
-
+2. Environment variables
 Create a .env file in the root project directory
 ```
 DESCOPE_PROJECT_ID=YOUR_DESCOPE_PROJECT_ID
 ```
 
-### Run the server!
-
-Run the following command:
-
+3. Run the server
+Start the app with the following command:
 ```
 python3 manage.py runserver
 ```
