@@ -4,30 +4,48 @@ Learn how to integrate Descope authentication in Django by building a Quillbot c
 
 ## Setup ⚙️
 
-1. Dependencies 
-Run the following command to install dependencies:
+1. Clone the repository:
+
+```
+git clone https://github.com/descope-sample-apps/django-sample-app.git
+```
+
+2. Install dependencies:
+
 ```
 make setup
 ```
 
-2. Environment variables
-Create a .env file in the root project directory
+3. Environment variables
+
 ```
 DESCOPE_PROJECT_ID=YOUR_DESCOPE_PROJECT_ID
 ```
 
-3. Run the server
-Start the app with the following command:
+- ```DESCOPE_PROJECT_ID```: can be found in your Descope's account under the [Project page](https://app.descope.com/settings/project)
+
+## 🔮 Running the Application 
+
+To start the application, run:
+
 ```
 python3 manage.py runserver
 ```
 
-## Roles 🥷
+## 🥷 Roles  
 
-Sign up for Descope and set admin roles.
+Sign up for Descope and create admin roles [here](https://app.descope.com/authorization).
 
 Create two roles in Descope, that will be mapped to Django permissions.
 - is_staff
 - is_superuser
 
 Map these roles to any user you would like to make a staff or superuser in your Django app.
+
+## ⚠️ Issue Reporting
+
+For any issues or suggestions, feel free to open an issue in the GitHub repository.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
