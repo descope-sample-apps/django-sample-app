@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+import dj_database_url
+
 
 load_dotenv()
 
@@ -31,6 +33,13 @@ SECRET_KEY = 'django-insecure-8m40wnakksq)38c8)oi&aghb9_^$dazg)3nw$!yq-@m$8uf8i4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# CORS settings
+#CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000"
+]
+
 ALLOWED_HOSTS = ["*"]
 
 
@@ -44,18 +53,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_descope',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # django-cors-headers
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django_descope.middleware.DescopeMiddleware',
+    'django_descope.middleware.DescopeMiddleware',   # Descope authentication
 ]
 
 ROOT_URLCONF = 'exampleapp.urls'
@@ -85,13 +96,11 @@ WSGI_APPLICATION = 'exampleapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# uses the DATABASE_URL environment variable or defaults to a local sqlite database
+sqlite3 = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=sqlite3, conn_max_age=600)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
